@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_room_chat_bg"
+    android:paddingLeft="16dp"
+    android:paddingTop="14dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="15sp"
+        android:textColor="@color/color_FFFFFF"
+        android:id="@+id/tv_effect_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/room_set_effect_title"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:textColor="@color/color_FFFFFF"
+        android:gravity="center_vertical"
+        android:id="@+id/cb_effect_switch"
+        android:background="@drawable/room_set_mixer_12_bg"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:button="@null"
+        android:text="@string/room_set_effect_desc"
+        android:drawableRight="@drawable/room_pwd_lock_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_effect_title"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="12sp"
+        android:textColor="@color/color_80ffffff"
+        android:id="@+id/tv_effect_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/room_set_gift_effect_desc"
+        app:layout_constraintTop_toBottomOf="@+id/cb_effect_switch"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

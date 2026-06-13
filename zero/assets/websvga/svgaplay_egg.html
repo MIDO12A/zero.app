@@ -1,0 +1,54 @@
+<html>
+
+<body style="text-align: center">
+<div>
+    <div id="testCanvas" style="width: 1000px; height: 200px; margin: auto"></div>
+    <!-- <canvas id="testCanvas" width="500" height="500" style="background-color: #000000; "></canvas> -->
+</div>
+
+
+<script src="./jquery-3.6.0.min.js"></script>
+<script src="./svga.min.js"></script>
+
+<script>
+
+     $(function(){
+            playWithSvgaWeb()
+     });
+
+     function playWithSvgaWeb(){
+            var parser = new SVGA.Parser('#testCanvas');
+            //alert(parser);
+            var player = new SVGA.Player('#testCanvas');
+            //alert(player);
+            player.clearsAfterStop=true;
+            player.loops=10; //循环10次
+            parser.load("../svga/有金豆_砸金蛋.svga", function (videoItem) {
+            // player.setImage('./samples/avatar.png', '99')
+               player.setVideoItem(videoItem);
+               player.startAnimation();
+            // player.startAnimationWithRange({location: 20, length: 1}, false);
+            }, function (error) {
+               alert(error.message);
+          })
+
+       //svga播放结束时的回调
+       player.onFinished(() => {
+              player.clearDynamicObjects();
+              player.clear();
+              //由于对象映射，所以调用customJavascriptInterface对象等于调用Android映射的对象
+              customJavascriptInterface.invokeMobile();
+       });
+
+
+
+
+
+
+   }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/shape_top_left_right_bg_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="17sp"
+        android:textColor="@color/color_16151A"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/country_name_title"
+        android:layout_marginVertical="13dp"/>
+    <com.yuehai.p١١٣ui.widget.widget.MaxHeightRecyclerView
+        android:id="@+id/recyclerview_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:minHeight="200dp"
+        android:layout_marginHorizontal="8dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

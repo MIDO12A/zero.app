@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@drawable/discover_room_country_tab_bg"
+    android:paddingLeft="8dp"
+    android:paddingTop="6dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="28dp"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="6dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_country_logo"
+        android:layout_width="14dp"
+        android:layout_height="14dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="11sp"
+        android:textColor="@color/color_FF59370D"
+        android:id="@+id/tv_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

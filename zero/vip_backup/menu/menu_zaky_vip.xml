@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ico_recording"
+        android:id="@+id/history"
+        android:title="@string/k_history"
+        app:actionProviderClass="com.shujiu.zaky.module.widget.toolbar.IconActionProvider"
+        app:showAsAction="always"/>
+</menu>

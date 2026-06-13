@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_container"
+    android:background="@drawable/room_info_owner_bg_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yuehai.p١١٣ui.widget.roundimageview.RoundImageView
+        android:id="@+id/iv_room_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/room_bg_friend"
+        android:scaleType="centerCrop"
+        app:round_leftTop_corner_radius="12dp"
+        app:round_rightTop_corner_radius="12dp"
+        app:round_type="round"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_room_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/room_owner_info_mask_bg"
+        android:scaleType="fitXY"
+        android:alpha="0.98"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_room_info"
+        android:background="@color/transparent"
+        android:paddingTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="scrollable"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_room_info"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:tag="layout/dialog_zaky_vip_en_0"
+    android:background="@drawable/shape_solid_rectangle_white_radius_17"
+    android:paddingBottom="30pt"
+    android:layout_width="348pt"
+    android:layout_height="wrap_content">
+    <com.shujiu.lib.view.roundlayout.RoundAngleRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:topLeftRadius="18pt"
+        app:topRightRadius="18pt">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="126pt"
+            android:src="@drawable/img_popup_vip_title"/>
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_marginTop="18pt"
+            android:src="@drawable/btn_popup_cancel"
+            android:layout_marginEnd="18pt"
+            android:layout_alignParentEnd="true"/>
+    </com.shujiu.lib.view.roundlayout.RoundAngleRelativeLayout>
+    <include
+        android:id="@+id/common_zaky_star_en"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:layout_marginStart="18pt"
+        android:layout_marginEnd="18pt"
+        layout="@layout/common_zaky_star_en_v1"/>
+</LinearLayout>

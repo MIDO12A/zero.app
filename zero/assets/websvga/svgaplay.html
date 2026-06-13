@@ -1,0 +1,51 @@
+<html>
+
+<body style="text-align: center">
+<div>
+    <div id="testCanvas" style=" width: 1000px; height: 2000px; margin: auto"></div>
+    <!-- <canvas id="testCanvas" width="500" height="500" style="background-color: #000000; "></canvas> -->
+</div>
+
+
+<script src="./jquery-3.6.0.min.js"></script>
+<script src="./svga.min.js"></script>
+
+<script>
+
+     $(function(){
+            playWithSvgaWeb()
+     });
+
+     function playWithSvgaWeb(){
+            var parser = new SVGA.Parser('#testCanvas');
+            //alert(parser);
+            var player = new SVGA.Player('#testCanvas');
+            //alert(player);
+            player.clearsAfterStop=true;
+            player.loops=1000; //循环1次
+            parser.load("../svga/miaoAbc.svga", function (videoItem) {
+            // player.setImage('./samples/avatar.png', '99')
+               player.setVideoItem(videoItem);
+               player.startAnimation();
+            // player.startAnimationWithRange({location: 20, length: 1}, false);
+            }, function (error) {
+               alert(error.message);
+          })
+
+
+       //svga播放结束时的回调
+       player.onFinished(() => {
+              player.clearDynamicObjects();
+              player.clear();
+              //     alert("error.message");
+              customJavascriptInterface.invokeMobile();
+
+       });
+
+   }
+
+
+    </script>
+</body>
+
+</html>

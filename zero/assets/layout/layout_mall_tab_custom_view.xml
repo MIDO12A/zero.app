@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="8dp"
+    app:layout_constraintWidth_min="56dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_vip_label"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/mine_mall_tab_vip_ic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="13sp"
+        android:textColor="@color/color_80ffffff"
+        android:id="@+id/tv_name"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_vip_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_min="30dp"/>
+    <View
+        android:id="@+id/v_indicator"
+        android:background="@drawable/mine_mall_indicator"
+        android:visibility="gone"
+        android:layout_width="16dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

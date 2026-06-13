@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp">
+    <com.yuehai.language.widget.CommonChoiceListView
+        android:id="@+id/rvChoice"
+        android:background="@drawable/language_shape_8_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:item_type="language_choose"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_000000"
+        android:gravity="center"
+        android:id="@+id/tv_save"
+        android:background="@drawable/language_shape_8_bg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/language_cancel_str"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

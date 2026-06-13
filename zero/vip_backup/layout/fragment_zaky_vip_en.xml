@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:tag="layout/fragment_zaky_vip_en_0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="172pt"
+        android:src="@drawable/img_vip_title"
+        android:scaleType="fitXY"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:tag="binding_1"
+            android:paddingTop="20pt"
+            android:paddingBottom="20pt"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:layout_marginStart="32pt"
+            android:layout_marginEnd="32pt">
+            <include
+                android:id="@+id/common_zaky_star_en"
+                layout="@layout/common_zaky_star_en_v2"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

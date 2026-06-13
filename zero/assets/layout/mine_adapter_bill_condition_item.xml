@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="14sp"
+    android:textColor="@color/color_FF111111"
+    android:id="@+id/tv_tag"
+    android:background="@drawable/mine_bg_bill_shape_nor_20_bg"
+    android:paddingLeft="14dp"
+    android:paddingTop="9dp"
+    android:paddingRight="14dp"
+    android:paddingBottom="9dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="87dp"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="9dp"/>

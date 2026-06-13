@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="layout/item_profile_user_medal_0"
+    android:layout_width="58pt"
+    android:layout_height="58pt">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_default"
+        android:layout_width="55pt"
+        android:layout_height="55pt"
+        android:src="@drawable/item_profile_user_medal_defalut"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_medal"
+        android:tag="binding_1"
+        android:layout_width="55pt"
+        android:layout_height="55pt"/>
+    <com.shujiu.lib.view.NineSvgaView
+        android:layout_gravity="center"
+        android:id="@+id/svga_view"
+        android:visibility="gone"
+        android:layout_width="55pt"
+        android:layout_height="55pt"/>
+</FrameLayout>

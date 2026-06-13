@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#80000000"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/dialog_content"
+        android:background="#fafafa"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:scrollbarSize="3dp"
+            android:scrollbarThumbVertical="@drawable/chat_translucent_round_rect_border"
+            android:id="@+id/pinned_list"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/chat_less_item_button"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+</LinearLayout>

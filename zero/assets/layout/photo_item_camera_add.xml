@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="@dimen/dp_100"
+    android:layout_margin="@dimen/dp_5"
+    android:layout_centerInParent="true">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/defaultimg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_camera_addicon"/>
+</LinearLayout>

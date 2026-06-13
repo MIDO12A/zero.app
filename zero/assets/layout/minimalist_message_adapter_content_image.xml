@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.tencent.qcloud.tuikit.timcommon.component.RoundCornerImageView
+        android:layout_gravity="center"
+        android:id="@+id/content_image_iv"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/video_play_btn"
+        android:clickable="false"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:src="@drawable/chat_minimalist_play_icon"/>
+    <com.tencent.qcloud.tuikit.timcommon.minimalistui.widget.message.TimeInLineTextLayout
+        android:layout_gravity="end|bottom"
+        android:id="@+id/image_msg_time_in_line_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"/>
+</FrameLayout>
