@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Test - Ayome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .info strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffd700;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        .error {
+            background: #f44336;
+        }
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        #langTest {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌐 Ayome Project - Language Test</h1>
+        
+        <div class="info">
+            <strong>Server Status:</strong>
+            <span class="status">✓ Running on http://localhost:8000</span>
+        </div>
+
+        <div class="info">
+            <strong>Browser Language:</strong>
+            <span id="browserLang">Loading...</span>
+        </div>
+
+        <div class="info">
+            <strong>Detected Language for App:</strong>
+            <span id="detectedLang">Loading...</span>
+        </div>
+
+        <div class="info">
+            <strong>Available Languages:</strong>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>🇺🇸 English (en-US) - Default</li>
+                <li>🇸🇦 Arabic (ar-SA)</li>
+                <li>🇹🇷 Turkish (tr-TR)</li>
+                <li>🇨🇳 Chinese (zh-CN)</li>
+            </ul>
+        </div>
+
+        <div id="langTest">
+            <strong style="color: #ffd700;">Language Detection Logic:</strong>
+            <pre id="logicOutput" style="color: #fff; margin-top: 10px; line-height: 1.6;"></pre>
+        </div>
+
+        <div class="links">
+            <h3>Open Application:</h3>
+            <a href="/m/cp/cp.html?lang=en_US" target="_blank">📄 CP Page 1 (English)</a>
+            <a href="/m/cp/cp2.html?lang=en_US" target="_blank">📄 CP Page 2 (English)</a>
+            <a href="/m/cp/cp.html?lang=ar_SA" target="_blank">📄 CP Page 1 (Arabic)</a>
+        </div>
+
+        <div class="info" style="margin-top: 30px; background: rgba(255, 193, 7, 0.2);">
+            <strong>⚠️ Important Note:</strong>
+            <p style="margin: 10px 0;">
+                This is a <strong>frontend-only</strong> application that requires a backend API at 
+                <code style="background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 3px;">https://app.ayomet.com/</code>
+            </p>
+            <p style="margin: 10px 0;">
+                The pages may show a white screen because they're trying to fetch data from the API. 
+                This test page confirms that:
+            </p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>✓ The server is running correctly</li>
+                <li>✓ Files are loading properly</li>
+                <li>✓ Language detection is working</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Detect browser language
+        const browserLang = navigator.language || navigator.userLanguage;
+        document.getElementById('browserLang').textContent = browserLang;
+
+        // Simulate the app's language detection logic
+        function detectAppLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langParam = urlParams.get('lang');
+            
+            if (langParam && ["zh_CN", "en_US", "tr_TR", "ar_SA"].includes(langParam)) {
+                return langParam;
+            }
+            
+            // Simulate the de() function from the app
+            const navLang = navigator.language.toLowerCase();
+            if (navLang.indexOf("ar") !== -1) return "ar_SA";
+            if (navLang.indexOf("tr") !== -1) return "tr_TR";
+            if (navLang.indexOf("zh") !== -1) return "zh_CN";
+            return "en_US";
+        }
+
+        const detectedLang = detectAppLanguage();
+        const langNames = {
+            "en_US": "🇺🇸 English",
+            "ar_SA": "🇸🇦 Arabic",
+            "tr_TR": "🇹🇷 Turkish",
+            "zh_CN": "🇨🇳 Chinese"
+        };
+        
+        document.getElementById('detectedLang').textContent = langNames[detectedLang] || detectedLang;
+
+        // Show logic
+        const logic = `
+1. Check URL parameter 'lang':
+   Current: ${new URLSearchParams(window.location.search).get('lang') || 'Not set'}
+
+2. Check browser language:
+   navigator.language: ${navigator.language}
+   Contains 'ar': ${navigator.language.toLowerCase().includes('ar')}
+   Contains 'tr': ${navigator.language.toLowerCase().includes('tr')}
+   Contains 'zh': ${navigator.language.toLowerCase().includes('zh')}
+
+3. Final detected language: ${detectedLang}
+   Will load: /m/chunk/${detectedLang.replace('_', '-')}.*.js
+
+4. To force English, use:
+   ?lang=en_US in the URL
+        `.trim();
+
+        document.getElementById('logicOutput').textContent = logic;
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.headwear-component[data-v-f1d1bd51] {
+    display: block;
+    width: var(--07aeca91);
+    height: var(--07aeca91);
+    position: relative
+}
+
+.headwear-component .avatar[data-v-f1d1bd51] {
+    width: var(--10ee160b);
+    height: var(--10ee160b);
+    position: absolute;
+    top: var(--63d63c92);
+    left: var(--63d63c92);
+    z-index: 1;
+    background-color: #fff
+}
+
+.headwear-component .headwear[data-v-f1d1bd51] {
+    width: var(--07aeca91);
+    height: var(--07aeca91);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2
+}
+
+.headwear-component .headwear-border[data-v-f1d1bd51] {
+    border: var(--687ae434) solid var(--7b1e16aa)
+}

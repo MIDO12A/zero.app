@@ -1,0 +1,234 @@
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.loading .van-loading {
+    position: fixed!important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.page-nav-bar {
+    background-color: #3296fa
+}
+
+.page-nav-bar .van-nav-bar__title,.page-nav-bar .van-icon {
+    color: #fff
+}
+
+html,body {
+    color: #333;
+    font-weight: 700;
+    font-size: var(--van-font-size-lg)
+}
+
+.tips {
+    font-size: .24rem;
+    color: #ccc
+}
+
+.tips .tips-num {
+    color: #56ccf2
+}
+
+.error-wrap {
+    height: 4.8rem;
+    margin: .2rem;
+    padding: 4rem .32rem;
+    border-radius: .2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff
+}
+
+.direction-right {
+    text-align: right
+}
+
+.direction-left {
+    text-align: left
+}
+
+.app-right {
+    direction: rtl
+}
+
+.app-left {
+    direction: ltr
+}
+
+.desc-color {
+    color: #ff4a4a
+}
+
+.add-color {
+    color: #ff9a03
+}
+
+.van-dialog {
+    font-weight: 400;
+    font-size: .34rem
+}
+
+.van-dialog input,.van-dialog .van-button {
+    font-size: .34rem
+}
+
+.van-picker-column__item {
+    height: .96rem
+}
+
+.van-picker__toolbar {
+    font-weight: 400
+}
+
+.van-ellipsis {
+    font-weight: 400;
+    font-size: .32rem;
+    line-height: .48rem;
+    color: rgba(0,0,0,.85)
+}
+
+.van-tabs--line .van-tabs__wrap {
+    height: .85rem;
+    margin-bottom: .2rem
+}
+
+.van-tab--line {
+    color: #bcbcbc
+}
+
+.van-tab--active {
+    color: #3169ee
+}
+
+.van-tab__text {
+    font-size: .3rem
+}
+
+.nick-vip1 {
+    background: linear-gradient(to right,#FAD962 20%,#FF9D69 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip2 {
+    background: linear-gradient(to right,#5EE2FF 19%,#2176F5 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip3 {
+    background: linear-gradient(to right,#3183ff 22%,#ffda16 50%,#3183ff 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip4 {
+    background: linear-gradient(to right,#FFB74C 10%,#FFC31D 51%,#FF43D6 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip5 {
+    background: linear-gradient(to right,#FF5C21 20%,#F2AA2D 35%,#FDDC42 60%,#D94100 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip6 {
+    background: linear-gradient(to right,#BF37FF 13%,#2FFFFF 46%,#BF37FF 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip7 {
+    background: linear-gradient(to right,#2fffff 5%,#bf37ff 42%,#ffbe3f 68%,#ff2f2f 90%,#ff2f2f 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.nick-vip8 {
+    background: linear-gradient(to right,#FF0073 5%,#FFE817 40%,#4DFF79 70%,#D151FF 90%,#E90000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.textHidden {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.flip {
+    transform: scaleX(-1)
+}
+
+.flipUp {
+    transform: rotateX(180deg)
+}
+
+.flex_justCenter {
+    display: flex;
+    justify-content: center
+}
+
+.flex_align {
+    display: flex;
+    align-items: center
+}
+
+.flex_justify {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.flex_column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center
+}
+
+.posRel {
+    position: relative
+}
+
+.posAbso {
+    position: absolute
+}
+
+.fadeBg {
+    transition: background-image .5s ease-in-out
+}
+
+.disableGray {
+    filter: grayscale(1)
+}
+
+.leaveBlankAppWebviewStyle {
+    width: 100%;
+    background-color: var(--05159995);
+    background-image: var(--a6c6bc24);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover
+}
